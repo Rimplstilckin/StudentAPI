@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YQPPIYiSP0v3eOtK6MSnRe2fALyGUNot/k//VIH/XiikCDWKENm6SrbNq1X5eUc/lkEdJNNp+YEaohVmC8jCaA==",
+  "dgSpecHash": "yrDNGoY5L48tp0AfhHFjL0BOxZUX0l5v2hlntcce1f5hPK+kjF83cCQHrZaE8Ea/Tz5yO3wJ1zBluPwCThQY1w==",
   "success": true,
-  "projectFilePath": "/Users/milosprotic/Documents/Projects/SSA/StudentAPI/BusinessLayer/BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\mitarbeiter\\source\\repos\\StudentAPI\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
