@@ -10,5 +10,8 @@ namespace Shared.Interfaces
     public interface IStudentRepository
     {
         List<Student> GetAllStudents();
+        int InsertStudent(Student s);
+        int UpdateStudent(Student s);
+        int DeleteStudent(int id); 
     }
 }

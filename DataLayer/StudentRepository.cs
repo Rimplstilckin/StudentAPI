@@ -43,5 +43,61 @@ namespace DataLayer
 
             return results;
         }
+
+        public int InsertStudent(Student s)
+        {
+            using(SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "INSTER INTO Students VALUES (" +
+                    "'" + s.StudentName + "', " +
+                    "'" + s.IndexNumber + "', " +
+                    "'" + s.PointsESPB + "', " +
+                    "'" + s.StudyYear + "', " +
+                    "'" + s.AverageMark + "', " +
+                    "'" + s.IsBudget + "', " +
+                    ")";
+
+                sqlConnection.Open();
+
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
+
+        public int InsertUpdate(Student s)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "UPDATE Students VALUES (" +
+                    "StudentNam" + "'" + s.StudentName + "', " +
+                    "IndexNumber" + "'" + s.IndexNumber + "', " +
+                    "PointsESPB" + "'" + s.PointsESPB + "', " +
+                    "StudyYear" + "'" + s.StudyYear + "', " +
+                    "AverageMark" + "'" + s.AverageMark + "', " +
+                    "IsBudget" + "'" + s.IsBudget + "', " +
+                    "WHERE  Id = " + s.Id;
+
+                sqlConnection.Open();
+
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
+
+        public int DeleteStudent(int id)
+        {
+            using(SqlConnection sqlConnection = new SqlConnection( Constants.connectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = "DELETE FROM Students WHERE Id = " + id;
+
+                sqlConnection.Open();
+
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
     }
 }
